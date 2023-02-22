@@ -1,3 +1,15 @@
-# App2-HelloWorld2023
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
 
-This is the repository for the App 2- Hello World assignment. The base code you will use is above (in this repository) and you will make your own copy of the code (fork the code). Then you can edit your fork without impacting the original copy. 
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude; 
+}
+</script>
