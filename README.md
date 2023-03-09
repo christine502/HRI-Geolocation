@@ -1,3 +1,11 @@
+
+<html>
+<body>
+
+<p>Click the button to get your coordinates!</p> //text for user to read
+<button onclick="getLocation()">Here!</button> //button for user for demonstration
+<p id="demo"></p>
+
 <script>
 var x = document.getElementById("demo");
 function getLocation() {
@@ -13,3 +21,6 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude; 
 }
 </script>
+
+</body>
+</html>
