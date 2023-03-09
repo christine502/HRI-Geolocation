@@ -21,6 +21,15 @@ Known Issues:
 https://www.w3schools.com/html/html5_geolocation.asp
 -->
 
+  	
+   <head> 
+      <title>Hello World</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+  
 <body>
 
 <p>Click the button to get your coordinates!</p> <!--text for user to read-->
