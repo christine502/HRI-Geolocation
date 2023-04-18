@@ -25,20 +25,13 @@ https://www.w3schools.com/html/html5_geolocation.asp
    <head> 
       <title>HRI Geolocation</title>  
       <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+      <script type="module" src="./index.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" type="text/css" href="./style.css" />
-      <script type="module" src="./index.js"></script>
+     
 
   </head>
-   
-<body>
-
-<p>Click the button to get your coordinates!</p> <!--text for user to read-->
-<button onclick="getLocation()">Here!</button> <!--button for user for demonstration-->
-<p id="demo"></p>
-
- <div id="map"></div>
   
 <script>
 var x = document.getElementById("demo");
@@ -72,38 +65,6 @@ function showPosition(position) {
       break;
   }
 }
-   #map {
-  height: 100%;
-}
-
-/* 
- * Optional: Makes the sample page fill the window. 
- */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.custom-map-control-button {
-  background-color: #fff;
-  border: 0;
-  border-radius: 2px;
-  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
-  margin: 10px;
-  padding: 0 0.5em;
-  font: 400 18px Roboto, Arial, sans-serif;
-  overflow: hidden;
-  height: 40px;
-  cursor: pointer;
-}
-.custom-map-control-button:hover {
-  background: rgb(235, 235, 235);
-}
-  
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-      defer
   
 let map, infoWindow;
 
@@ -158,7 +119,50 @@ function initMap() {
 window.initMap = initMap; 
   
 </script>
+  
+<style>
+    
+  #map {
+  height: 100%;
+}
 
+/* 
+ * Optional: Makes the sample page fill the window. 
+ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-map-control-button {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  height: 40px;
+  cursor: pointer;
+}
+.custom-map-control-button:hover {
+  background: rgb(235, 235, 235);
+}
+  
+</style>
+  
+<body>
+
+<p>Click the button to get your coordinates!</p> <!--text for user to read-->
+<button onclick="getLocation()">Here!</button> <!--button for user for demonstration-->
+<p id="demo"></p>
+
+<div id="map">
+  
+</div>
 </body>
 </html>
 
